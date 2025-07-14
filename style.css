@@ -1,0 +1,274 @@
+:root {
+  --primary-color: rgb(252, 252, 252);
+  --secondary-color: rgba(119, 119, 119, 0.163);
+  --title-color: #ffffffe4;
+  --orange-color: #ff693d;
+  --spacing: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer {
+  background-image: url('Images/Fondo_libros.jpg'); 
+  background-size: contain;
+  background-position: center; 
+  background-attachment: fixed; 
+  padding: 15px;
+  color: var(--primary-color); 
+  border-radius: 10px;
+}
+
+h1{
+  text-align: justify;
+  font-size: 5rem;
+  color: var(--title-color);
+}
+
+header p {
+  text-align: end;
+  font-size: 1.5rem;
+  color: var(--title-color);
+} 
+
+main {
+  max-width: fit-content;
+  padding: 1rem;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  max-width: 1200px;
+  margin: auto;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing);
+  border: 10px solid black;
+  padding: 3rem;
+  border-radius: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.item-a { /* Harry Potter */
+  grid-row: span 2;
+  grid-column: span 4;
+}
+
+.item-b { /* Texto */
+  grid-column: span 4;
+  grid-row: span 1;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.item-c { /* Never Ending Story */
+  grid-column: 5 / 8;
+  grid-row: 1 / 4;
+}
+
+.item-d { /* El Principito */
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.item-e { /* The Hunger Games */
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.item-f { /* Percy Jackson */
+  grid-column: span 4;
+  grid-row: span 3;
+}
+
+.item-g { /* Gulliver's Travels */
+  grid-column: 1;
+  grid-row: 6 / 7;
+}
+
+.button {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  max-width: 1200px;
+  margin: auto;
+  gap: var(--spacing);
+}
+
+.btn_harry {
+  cursor: pointer;
+  width: 50%;
+  background-color: var(--title-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se adapta al espacio */
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  text-decoration: none;
+  color: darkslategrey;
+}
+
+.btn_historia {
+  cursor: pointer;
+  width: 50%;
+  background-color: var(--title-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se adapta al espacio */
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  text-decoration: none;
+  color: purple;
+}
+
+.btn_percy {
+  cursor: pointer;
+  width: 50%;
+  background-color: var(--title-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se adapta al espacio */
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  text-decoration: none;
+  color: darkgoldenrod;
+}
+
+.btn_juegos {
+  cursor: pointer;
+  width: 50%;
+  background-color: var(--title-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se adapta al espacio */
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  text-decoration: none;
+  color: firebrick;
+}
+
+.btn_principito {
+  cursor: pointer;
+  width: 50%;
+  background-color: var(--title-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se adapta al espacio */
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  text-decoration: none;
+  color: darkblue;
+}
+
+.btn_gulliver {
+  cursor: pointer;
+  width: 50%;
+  background-color: var(--title-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Se adapta al espacio */
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  text-decoration: none;
+  color: green;
+}
+
+footer p {
+  font-size: 1.2rem;
+  color: var(--title-color);
+  margin-top: 20px;
+  text-indent: 20px;
+}
+
+footer h3 {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) { /* Tamaño para cuando esté por debajo de los 768px */
+
+  h1 {
+    text-align: justify;
+    font-size: 3rem;
+    color: var(--title-color);
+  }
+
+  footer h3 {
+    font-size: 1.2rem;
+    color: var(--title-color);
+    margin-top: 20px;
+  }
+
+  .button {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    max-width: 1200px;
+    margin: auto;
+    gap: var(--spacing);
+    padding: 15px 10px;
+  }
+}
+
+@media (max-width: 670px) { /* Tamaño para cuando esté por debajo de los 670px */
+  h1 {
+    font-size: 3rem;
+  }
+
+  footer h3 {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria {
+  display: grid;
+  grid-template-rows: none;
+  grid-template-columns: 1fr;
+  max-width: 90vw;
+  gap: var(--spacing);
+  border: 5px solid black;
+  padding: 1rem;
+  border-radius: 20px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .item-a, .item-b, .item-c, .item-d, .item-e, .item-f, .item-g {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    width: 100%;
+    font-size: 0.7rem; /*La letra se desbordaba un poco al hacerse mas pequeño */
+    box-sizing: border-box; /*Esto es para que el box del texto no se salga del contenedor del grid al hacerse mas pequeño */
+  }
+}
